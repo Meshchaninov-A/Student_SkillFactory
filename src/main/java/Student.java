@@ -6,13 +6,20 @@
 public class Student {
     private final String name;
     private final String surname;
-    private short age;
+    private final short age;
     private int group;
     private boolean hasExperience;
     private short tasksCompleted;
     private short modulesCompleted;
     private String targetOfLearning;
 
+    /**
+     * Конструктор, инициализирующий поля по умолчанию.
+     *
+     * @param name    Имя студента
+     * @param surname Фамилия студента
+     * @param age     Возвраст студента
+     */
     public Student(String name, String surname, short age) {
         this(name, surname, age, 0, false, (short) 0, (short) 0, "Рост в качестве программиста");
     }
@@ -100,5 +107,29 @@ public class Student {
 
     public short getModulesCompleted() {
         return modulesCompleted;
+    }
+
+    public String getTargetOfLearning() {
+        return targetOfLearning;
+    }
+
+    public void setGroup(int group) {
+        this.group = group;
+    }
+
+    public void setHasExperience(boolean hasExperience) {
+        this.hasExperience = hasExperience;
+    }
+
+    public void setTasksCompleted(short tasksCompleted) {
+        this.tasksCompleted = tasksCompleted;
+    }
+
+    public void setModulesCompleted(short modulesCompleted) {
+        this.modulesCompleted = modulesCompleted;
+    }
+
+    public void setTargetOfLearning(String targetOfLearning) {
+        this.targetOfLearning = targetOfLearning;
     }
 }
